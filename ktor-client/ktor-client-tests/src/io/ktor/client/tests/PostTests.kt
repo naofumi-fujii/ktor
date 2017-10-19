@@ -18,7 +18,7 @@ import java.util.*
 
 
 open class PostTests(factory: HttpClientBackendFactory) : TestWithKtor(factory) {
-    val BODY_PREFIX = "Hello, post"
+    private val BODY_PREFIX = "Hello, post"
 
     override val server = embeddedServer(Jetty, 8080) {
         routing {
